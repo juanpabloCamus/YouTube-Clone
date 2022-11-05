@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Box } from '@mui/material';
 
+import { Navbar, Feed, ChannelDetail, VideoDetail, SearchFeed} from './components'
+
 const App = () => (
   <BrowserRouter>
     <Box sx={{ backgroundColor: '#000' }}>
@@ -10,7 +12,7 @@ const App = () => (
         <Route path='/' exact element={<Feed />} />
         <Route path='/video/:id' element={<VideoDetail />} />
         <Route path='/channel/:id' element={<ChannelDetail />} />
-        <Route path='/video/:searchTerm' element={<SearchFeed />} />
+        <Route path='/search/:searchTerm' element={<SearchFeed />} />
       </Routes>
     </Box>
   </BrowserRouter>
